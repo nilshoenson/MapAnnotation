@@ -14,6 +14,7 @@
 		CB14362B2A653F5400942DBF /* MapAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14362A2A653F5400942DBF /* MapAnnotationTests.swift */; };
 		CB1436352A653F5400942DBF /* MapAnnotationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1436342A653F5400942DBF /* MapAnnotationUITests.swift */; };
 		CB1436372A653F5400942DBF /* MapAnnotationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1436362A653F5400942DBF /* MapAnnotationUITestsLaunchTests.swift */; };
+		CB9737F92A655009004833A5 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9737F82A655009004833A5 /* StatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CB1436302A653F5400942DBF /* MapAnnotationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapAnnotationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1436342A653F5400942DBF /* MapAnnotationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationUITests.swift; sourceTree = "<group>"; };
 		CB1436362A653F5400942DBF /* MapAnnotationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB9737F82A655009004833A5 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		CB1436182A653F5300942DBF /* MapAnnotation */ = {
 			isa = PBXGroup;
 			children = (
+				CB9737F72A654FEF004833A5 /* Components */,
 				CB1436192A653F5300942DBF /* MapAnnotationApp.swift */,
 				CB14361B2A653F5300942DBF /* ContentView.swift */,
 				CB14361D2A653F5400942DBF /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				CB1436362A653F5400942DBF /* MapAnnotationUITestsLaunchTests.swift */,
 			);
 			path = MapAnnotationUITests;
+			sourceTree = "<group>";
+		};
+		CB9737F72A654FEF004833A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CB9737F82A655009004833A5 /* StatusView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				CB14361C2A653F5300942DBF /* ContentView.swift in Sources */,
 				CB14361A2A653F5300942DBF /* MapAnnotationApp.swift in Sources */,
+				CB9737F92A655009004833A5 /* StatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
