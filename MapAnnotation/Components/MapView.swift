@@ -36,7 +36,7 @@ struct MapView: View {
 						dismiss()
 					})
 						.padding(8)
-						.font(.system(size: 13, weight: .regular, design: .rounded))
+						.font(.system(size: 14, weight: .regular, design: .rounded))
 						.foregroundColor(Colors.textColorDark)
 						.background(BlurView(style: .systemMaterial))
 						.clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
