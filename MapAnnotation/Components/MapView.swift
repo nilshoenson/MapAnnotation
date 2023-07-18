@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
+//  MapView.swift
 //  MapAnnotation
 //
-//  Created by Nils Hoenson on 17/07/2023.
+//  Created by Nils Hoenson on 18/07/2023.
 //
 
 import SwiftUI
 import MapKit
 
-struct ContentView: View {
+struct MapView: View {
 	@State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 52.080, longitude: 4.309), span: MKCoordinateSpan(latitudeDelta: 16, longitudeDelta: 16))
-
+	
 	let locations = [
 		Location(name: "Michael", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141), timezone: "BST", status: .available),
 		Location(name: "Dennis", coordinate: CLLocationCoordinate2D(latitude: -33.918, longitude: 18.423), timezone: "SAST", status: .available),
@@ -30,8 +30,9 @@ struct ContentView: View {
 	}
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MapView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		MapView()
 	}
 }
+
