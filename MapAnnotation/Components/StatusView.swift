@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct ScaleDownButton: ButtonStyle {
-	func makeBody(configuration: Self.Configuration) -> some View {
-		configuration.label
-			.scaleEffect(configuration.isPressed ? 0.97 : 1)
-			.animation(.spring(response: 0.25, dampingFraction: 0.7), value: configuration.isPressed)
-	}
-}
-
 struct BlurView: UIViewRepresentable {
 	typealias UIViewType = UIVisualEffectView
 	
@@ -99,25 +91,8 @@ struct StatusView: View {
 				.opacity(showFull ? 1 : 0)
 			
 			VStack(spacing: 8) {
-				HStack {
-					Text("Local Time")
-						.foregroundColor(Colors.textColorLight)
-					Spacer()
-					Text(getCurrentTime(locale: self.locale))
-						.fontWeight(.bold)
-						.monospacedDigit()
-						.foregroundColor(Colors.textColorDark)
-				}
-
-				HStack {
-					Text("Meeting Time")
-						.foregroundColor(Colors.textColorLight)
-					Spacer()
-					Text(convertFromCET(locale: self.locale))
-						.fontWeight(.bold)
-						.monospacedDigit()
-						.foregroundColor(Colors.textColorDark)
-				}
+				RowView(label: "Local Time", value: getCurrentTime(locale: self.locale))
+				RowView(label: "Meeting Time", value: convertFromCET(locale: self.locale))
 			}
 			.padding(10)
 			.frame(width: 156)

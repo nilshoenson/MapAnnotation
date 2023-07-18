@@ -9,24 +9,54 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-	@State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 52.080, longitude: 4.309), span: MKCoordinateSpan(latitudeDelta: 16, longitudeDelta: 16))
-
-	let locations = [
-		Location(name: "Michael", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141), timezone: "BST", status: .available),
-		Location(name: "Dennis", coordinate: CLLocationCoordinate2D(latitude: -33.918, longitude: 18.423), timezone: "SAST", status: .available),
-		Location(name: "Steven", coordinate: CLLocationCoordinate2D(latitude: 40.730, longitude: -73.935), timezone: "EST", status: .before),
-		Location(name: "Grace", coordinate: CLLocationCoordinate2D(latitude: 35.652, longitude: 139.839), timezone: "JST", status: .after),
-		Location(name: "Nils", coordinate: CLLocationCoordinate2D(latitude: 52.080, longitude: 4.309), timezone: "CET", status: .available)
-	]
+	@State private var showModal = false
+	@State private var shouldAnimate = false
 	
 	var body: some View {
-		ZStack {
-			Map(coordinateRegion: $mapRegion, annotationItems: locations) { location in
-				MapAnnotation(coordinate: location.coordinate) {
-					StatusView(location.name, locale: location.timezone, status: location.status)
+		NavigationView {
+			ScrollView {
+				VStack(spacing: 16) {
+					RowView(label: "Date", value: "Tomorrow")
+					RowView(label: "From (CET)", value: "14:30")
+					RowView(label: "To (CET)", value: "15:30")
+					RowView(label: "Location", value: "Cape Town, South Africa")
+					RowView(label: "Guests", value: "Cape Town, South Africa", src: "All")
+					Divider()
+						.padding(.vertical, 12)
+					Text("You are inviting guests from different timezones into your meeting. Check to see if the current date fits their work schedule.")
+						.foregroundColor(Colors.textColorLight)
+						.multilineTextAlignment(.center)
+						.padding(.bottom, 6)
+					
+					PrimaryButton("View Timezones", onTap: {
+						showModal.toggle()
+					})
+					.frame(width: 146)
 				}
-			}.ignoresSafeArea()
+				.padding(20)
+				.frame(maxWidth: .infinity)
+				.tracking(-0.25)
+				.font(.system(size: 16, weight: .regular, design: .rounded))
+				.background(.gray.opacity(0.1))
+				.clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+				.offset(y: shouldAnimate ? 16 : 46)
+				.opacity(shouldAnimate ? 1 : 0)
+				.scaleEffect(shouldAnimate ? 1 : 0.96)
+			}
+			.onAppear {
+				withAnimation(
+					.spring(response: 0.6, dampingFraction: 0.65, blendDuration: 8.0)
+					.delay(0.25)
+				) {
+					shouldAnimate = true
+				}
+			}
+			.padding(.horizontal)
+			.navigationTitle("Amie Standup")
 		}
+		.sheet(isPresented: $showModal, content: {
+			MapView()
+		})
 	}
 }
 

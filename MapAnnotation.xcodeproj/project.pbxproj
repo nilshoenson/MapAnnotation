@@ -20,6 +20,8 @@
 		CB9738002A669EEF004833A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9737FF2A669EEE004833A5 /* Location.swift */; };
 		CB9738022A669F3E004833A5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9738012A669F3E004833A5 /* MapView.swift */; };
 		CB9738042A66A0C4004833A5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9738032A66A0C4004833A5 /* PrimaryButton.swift */; };
+		CB9738072A66BF34004833A5 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9738062A66BF34004833A5 /* ButtonStyles.swift */; };
+		CB9738092A66C6D0004833A5 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9738082A66C6D0004833A5 /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		CB9737FF2A669EEE004833A5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CB9738012A669F3E004833A5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CB9738032A66A0C4004833A5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		CB9738062A66BF34004833A5 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		CB9738082A66C6D0004833A5 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		CB1436182A653F5300942DBF /* MapAnnotation */ = {
 			isa = PBXGroup;
 			children = (
+				CB9738052A66BF27004833A5 /* Styles */,
 				CB9737FA2A65A3B0004833A5 /* Helpers */,
 				CB9737F72A654FEF004833A5 /* Components */,
 				CB1436192A653F5300942DBF /* MapAnnotationApp.swift */,
@@ -147,6 +152,7 @@
 				CB9737F82A655009004833A5 /* StatusView.swift */,
 				CB9738012A669F3E004833A5 /* MapView.swift */,
 				CB9738032A66A0C4004833A5 /* PrimaryButton.swift */,
+				CB9738082A66C6D0004833A5 /* RowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -159,6 +165,14 @@
 				CB9737FF2A669EEE004833A5 /* Location.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		CB9738052A66BF27004833A5 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CB9738062A66BF34004833A5 /* ButtonStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9738022A669F3E004833A5 /* MapView.swift in Sources */,
+				CB9738092A66C6D0004833A5 /* RowView.swift in Sources */,
 				CB14361C2A653F5300942DBF /* ContentView.swift in Sources */,
 				CB9737FE2A65A93B004833A5 /* Status.swift in Sources */,
 				CB9737FC2A65A3EE004833A5 /* Colors.swift in Sources */,
+				CB9738072A66BF34004833A5 /* ButtonStyles.swift in Sources */,
 				CB14361A2A653F5300942DBF /* MapAnnotationApp.swift in Sources */,
 				CB9738002A669EEF004833A5 /* Location.swift in Sources */,
 				CB9738042A66A0C4004833A5 /* PrimaryButton.swift in Sources */,
