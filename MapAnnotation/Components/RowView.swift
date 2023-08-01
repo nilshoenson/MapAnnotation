@@ -10,15 +10,15 @@ import SwiftUI
 struct RowView: View {
 	let label: String
 	let value: String
-	var src: String? = ""
+	var src: String?
 	
 	var body: some View {
 		HStack(alignment: .center) {
 			Text(label)
 				.foregroundColor(Colors.textColorLight)
 			Spacer()
-			if src != "" {
-				Image(src!)
+			if (src != nil) {
+				Image(src ?? "")
 			} else {
 				Text(value)
 					.fontWeight(.bold)

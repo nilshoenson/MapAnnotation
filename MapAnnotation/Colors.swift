@@ -17,7 +17,6 @@ enum Colors {
 	static let textColorLight = Color(red: 0.478, green: 0.478, blue: 0.478)
 	static let textColorDark = Color(red: 0.149, green: 0.149, blue: 0.149)
 	
-	
 	/// Button colors
 	static let primaryColor = Color(red: 0.698, green: 0.463, blue: 0.953)
 }

@@ -52,7 +52,7 @@ struct ContentView: View {
 				}
 			}
 			.padding(.horizontal)
-			.navigationTitle("Amie Standup")
+			.navigationTitle("Weekly Standup")
 		}
 		.sheet(isPresented: $showModal, content: {
 			MapView()

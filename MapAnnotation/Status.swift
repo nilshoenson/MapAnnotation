@@ -8,33 +8,27 @@
 import SwiftUI
 
 enum Status: String {
-	case available = "available"
-	case after = "after"
-	case before = "before"
+	case available, after, before
 }
 
 func getStatus(status: Status) -> Color? {
-	switch status.rawValue {
-		case "available":
+	switch status {
+		case .available:
 			return Colors.availableColor
-		case "after":
+		case .after:
 			return Colors.unavailableColor
-		case "before":
+		case .before:
 			return Colors.beforeColor
-		default:
-			return nil
 	}
 }
 
 func getStatusTitle(status: Status) -> String {
-	switch status.rawValue {
-		case "available":
+	switch status {
+		case .available:
 			return "At Work"
-		case "after":
+		case .after:
 			return "After Work"
-		case "before":
+		case .before:
 			return "Before"
-		default:
-			return ""
 	}
 }
